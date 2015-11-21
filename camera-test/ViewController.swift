@@ -121,13 +121,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         print(error)
     }
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         locationManager.requestLocation()
         print (CLLocationManager.authorizationStatus())
     }
