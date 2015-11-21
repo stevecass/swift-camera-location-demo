@@ -19,7 +19,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBAction func buttonClicked() {
         let picker = UIImagePickerController()
         picker.delegate = self
-        if false && UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             picker.sourceType = UIImagePickerControllerSourceType.Camera
         } else {
             picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
